@@ -1,3 +1,9 @@
 var practice2 = Class.create();
-practice2.protoType = {
+practice2.prototype = {
+    initialize: function() {
+        
+    },
+
+    type: 'practice2'
+};
   
