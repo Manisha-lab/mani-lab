@@ -1,5 +1,5 @@
 var practiceUtil = Class.create();
-practiceUtil.protoType = {
+practiceUtil.prototype = {
     initialize: function() {
 
     },
