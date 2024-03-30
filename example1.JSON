@@ -1,0 +1,42 @@
+{
+                "Address_Billing":
+                {
+                              "Description": "{DESCRIPTION}",
+                              "CompanyName": "{COMPANYNAME}",
+                              "Name_First": "{NAME_FIRST}",
+                              "Name_Last": "{NAME_LAST}",
+                              "StreetAddress_Line1": "{STREET_ADDRESS}",
+                              "StreetAddress_Line2": "{STREET_ADDRESS_SECONDARY}",
+                              "City": "{CITYNAME}",
+                              "StateOrProvince": "{STATEABBREVIATIONCODE}",
+                              "PostalCode": "{ZIPCODE}",
+                              "Country": "US",
+                              "Email": "{EMAILADDRESS}",
+                              "Telephone": "{PHONENUMBER}"
+                },
+                "Address_Shipping":
+                {
+                              "Description": "{DESCRIPTION}",
+                              "CompanyName": "{COMPANYNAME}",
+                              "Name_First": "{NAME_FIRST}",
+                              "Name_Last": "{NAME_LAST}",
+                              "StreetAddress_Line1": "{STREET_ADDRESS}",
+                              "StreetAddress_Line2": "{STREET_ADDRESS_SECONDARY}",
+                              "City": "{CITYNAME}",
+                              "StateOrProvince": "{STATEABBREVIATIONCODE}",
+                              "PostalCode": "{ZIPCODE}",
+                              "Country": "US",
+                              "Email": "{EMAILADDRESS}",
+                              "Telephone": "{PHONENUMBER}"
+                },
+                "ItemsRequested":[
+                {
+                                            "ProductID": "{PRODUCTID}",
+                                            "Quantity": "{QUANTITYREQUESTED}"
+               }
+
+          ],
+                "Comments": "{COMMENTS}",
+                "PONumber": "{YOUR_PO_NUMBER}",
+    
+ }
