@@ -1,0 +1,5 @@
+var ourUser = gs.getUser(); 
+gs.­print(­ourUser.­getFirstName()); //print the first name of the user you are currently logged in as 
+newUser = ourUser.­getUserByID(<user_sys_id>); //fetch a different user, using the sys_id of the target user record. 
+gs.­print(­newUser.­getFirstName()); //first name of the user you fetched above 
+gs.­print(­newUser.­isMemberOf(­'Capacity Mgmt'));
