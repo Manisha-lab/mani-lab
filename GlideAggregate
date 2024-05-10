@@ -11,3 +11,41 @@ while (inc.next()) {
         assigned_users.push(inc.assigned_to.getDisplayValue()); //this gets the assigned to user reference in an array
 }
 gs.print(assigned_users);
+
+
+
+var assigned_users = [];
+var category = [];
+var inc = new GlideAggregate('incident');
+
+inc.addQuery('active', true);
+//inc.addQuery("class", "Computer");
+inc.groupBy("assigned_to");
+inc.groupBy('category');
+inc.addAggregate('count','assigned_to');
+inc.addAggregate('count','category');
+inc.query();
+while (inc.next()) {
+	gs.print(inc.assigned_to.getDisplayValue() + " ***********  " + inc.getAggregate('count','assigned_to') + '/n/n' + inc.category.getDisplayValue());
+        assigned_users.push(inc.assigned_to.getDisplayValue()); //this gets the assigned to user reference in an array
+		category.push(inc.category.getDisplayValue());
+	//	gs.print(inc.category.getDisplayValue() + " ***********  " + inc.getAggregate('count','category'));
+		//category.push(inc.category.getDisplayValue());
+}
+gs.print(assigned_users);
+gs.print(category);
+
+
+
+************************************
+************************************
+
+var agg = new GlideAggregate('incident');
+agg.addAggregate('COUNT');
+agg.groupBy('priority');
+agg.groupBy('category');
+agg.query();
+
+while(agg.next()) {
+gs.print('Priority: ' + agg.priority + ' Category: ' + agg.category + ' Count: ' + agg.getAggregate('COUNT'));
+}
