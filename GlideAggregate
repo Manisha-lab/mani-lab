@@ -1,0 +1,13 @@
+var assigned_users = [];
+var inc = new GlideAggregate('incident');
+
+inc.addQuery('active', true);
+//inc.addQuery("class", "Computer");
+inc.groupBy("assigned_to");
+inc.addAggregate('count','assigned_to');
+inc.query();
+while (inc.next()) {
+	gs.print(inc.assigned_to.getDisplayValue() + " ***********  " + inc.getAggregate('count','assigned_to'));
+        assigned_users.push(inc.assigned_to.getDisplayValue()); //this gets the assigned to user reference in an array
+}
+gs.print(assigned_users);
