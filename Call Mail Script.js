@@ -1,4 +1,4 @@
-Name of Mail Script : showRitms
+//Name of Mail Script : showRitms
 (function runMailScript(current, template, email, email_action, event) {
    var item = new GlideRecord("sc_req_item");
    item.addQuery("request", current.sys_id);
@@ -10,8 +10,8 @@ Name of Mail Script : showRitms
    }
 })(current, template, email, email_action, event);
 
-****************************
-*******************************8
+//****************************
+//*******************************
 
 Call Mail Script in Notification
 
