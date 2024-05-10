@@ -1,0 +1,26 @@
+var getMyDepartments = Class.create();
+
+getMyDepartments.prototype = {
+ initialize: function() {},
+
+getDepartmentUsers: function() {
+ var usersList = "sys_idIN";
+ var grUser = new GlideRecord('sys_user');
+
+grUser.addQuery('company', gs.getUser().getCompanyID());
+ grUser.addQuery('department', gs.getUser().getDepartmentID());
+ grUser.query();
+
+while (grUser.next()) {
+ usersList = usersList + ',' + grUser.sys_id;
+ }
+ },
+ type: 'getMyDepartments'
+};
+
+*******************************************************
+*********************************************************
+
+Call Script inlide from Reference Qulifer:
+
+javscript:new getMyDepatments.getDepartmentUses();
