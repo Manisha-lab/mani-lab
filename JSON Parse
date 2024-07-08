@@ -1,0 +1,31 @@
+var abc = {"name":"Peter parker","heroName":"Spiderman","friends":[{"heroName":"Deadpool","skills":["Martial artist","Assassin"]},{"heroName":"Hulk","skills":["Superhuman Speed","Superhuman Strength"]},{"heroName":"Wolverine","skills":["Retractable bone claws","Superhuman senses"]}]};
+
+               gs.print(abc);
+
+               var a = JSON.stringify(abc);
+
+               var parser = new JSONParser();
+
+               var parsed = parser.parse(a);
+
+               var str = '';
+
+               var str1 = '';
+
+               for (var i in abc.friends) {
+
+                              str += abc.friends[i].heroName + "<br/>";
+
+                              for (var j in abc.friends[i].skills) {
+
+                                             str1 += abc.friends[i].skills[j] + "<br/>";
+
+                              }
+
+               }
+
+              
+
+               gs.print(str);
+
+               gs.print(str1);
